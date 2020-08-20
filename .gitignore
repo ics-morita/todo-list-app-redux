@@ -1,6 +1,6 @@
-node_modules/
+*/node_modules/
 yarn-error.log
-src/**/*.js.map
+*/src/**/*.js.map
 
 .DS_Store
 Thumbs.db

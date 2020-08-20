@@ -4,6 +4,11 @@ import { deleteTodo, toggleTodo } from '../actions';
 import { TodoListComponent } from '../components/TodoListComponent';
 
 export const TodoList = (props) => {
+  /**
+   * TODOリストの可視状態を制御します。
+   * @param {[{ id: string, label: string, completed: boolean}]} todos - TODOリスト
+   * @param {string} filter - フィルターの状態
+   */
   const getVisibleTodos = (todos, filter) => {
     switch (filter) {
       case 'all':
@@ -14,7 +19,10 @@ export const TodoList = (props) => {
         return todos.filter((t) => t.completed);
     }
   };
-
+  /**
+   * フィルターに応じて、メッセージを変更して返します。
+   * @param {string} filter - フィルターの状態
+   */
   const getStatusTodos = (filter) => {
     switch (filter) {
       case 'all':

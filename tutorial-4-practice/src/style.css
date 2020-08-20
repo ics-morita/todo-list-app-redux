@@ -1,0 +1,119 @@
+body {
+    font-family: "Roboto", "Helvetica Neue",
+      Arial,
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      Meiryo,
+      sans-serif;
+      color: #707070;
+      background: #E0E0E0;
+  }
+
+.app {
+    width: 600px;
+    margin: 60px auto;
+}
+
+.app_title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 300;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+}
+
+.form {
+    background: #343a40;
+    box-shadow: 1px 1px 3px #cccccc;
+    padding: 16px;
+    display: flex;
+}
+
+form {
+    width: 100%;
+}
+
+.form_input {
+    padding: 8px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    border-bottom: solid 1px #cccccc;
+    outline: none;
+    width: 80%;
+    margin-right: 16px;
+    margin-left: 24px;
+    font-size: 20px;
+}
+
+.todo, .todo_none {
+    padding: 16px;
+    background: #ffffff;
+    margin: 0;
+    list-style: none;
+}
+
+.todo_none {
+    text-align: center;
+}
+
+.todo_item {
+    position: relative;
+    margin: 8px;
+    border-bottom: solid 1px #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.todo_item:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.button_onChange {
+    position: relative;
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 28px;
+    background: transparent;
+    border: none;
+    margin-right: 12px;
+    outline: none;
+}
+
+.button_onChange_uncomplete:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 5px;
+    position: absolute;
+    border: 2px solid #707070;
+    border-radius: 100px;
+}
+
+.button_onChange_completed:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: .35em;
+    left: 0.5em;
+    width: 15px;
+    height: 7px;
+    border-left: 2px solid #7AD300;
+    border-bottom: 2px solid #7AD300;
+    transform: rotate(-45deg);
+}
+
+.button_onDelete {
+    position: absolute;
+    top: -2px;
+    right: 0;
+}
+
+.footer {
+    background: #343a40;
+    padding: 12px;
+    color: #ffffff;
+}

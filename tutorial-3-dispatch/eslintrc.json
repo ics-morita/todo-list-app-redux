@@ -1,0 +1,21 @@
+{
+    "extends": [
+      "google",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2019,
+      "sourceType": "module"
+    },
+    "rules": {
+      "arrow-body-style": [
+        "error",
+        "as-needed"
+      ],
+      "require-jsdoc": "off",
+      "valid-jsdoc": "off"
+    }
+}  
