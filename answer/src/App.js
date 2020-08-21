@@ -1,7 +1,7 @@
 import React from 'react';
 import { TodoList } from './containers/TodoListContainer';
 import { AddTodo } from './containers/AddTodoContainer';
-import { Footer } from './components/Footer';
+import { Footer } from './containers/FooterContainer';
 
 export const App = () => {
 	return (

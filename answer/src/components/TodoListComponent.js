@@ -1,17 +1,16 @@
 import React from "react";
 import { TodoItem } from "./TodoItem";
 
-export const TodoListComponent = ({ todos, status, handleToggleTodo, handleDeleteTodo }) => {
-  console.log(todos, status, handleToggleTodo, handleDeleteTodo)
-  if(todos.length > 0 ) {
+export const TodoListComponent = ({ tasks, status, handleToggleTodo, handleDeleteTodo }) => {
+  if(tasks.length > 0 ) {
     return (
       <ul className="todo">
-      {todos.map((todo) => (
+      {tasks.map((task) => (
         <TodoItem
-          key={todo.id}
-          {...todo}
-          onChange={() => handleToggleTodo(todo.id)}
-          onDelete={() => handleDeleteTodo(todo.id)}
+          key={task.id}
+          {...task}
+          onChange={() => handleToggleTodo(task.id)}
+          onDelete={() => handleDeleteTodo(task.id)}
         />
       ))}
     </ul>  

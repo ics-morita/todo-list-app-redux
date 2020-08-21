@@ -9,14 +9,14 @@ export const TodoList = (props) => {
    * @param {[{ id: string, label: string, completed: boolean}]} todos - TODOリスト
    * @param {string} filter - フィルターの状態
    */
-  const getVisibleTodos = (todos, filter) => {
+  const getVisibleTodos = (tasks, filter) => {
     switch (filter) {
       case 'all':
-        return todos;
+        return tasks;
       case 'active':
-        return todos.filter((t) => !t.completed);
+        return tasks.filter((t) => !t.completed);
       case 'completed':
-        return todos.filter((t) => t.completed);
+        return tasks.filter((t) => t.completed);
     }
   };
   /**
@@ -36,7 +36,7 @@ export const TodoList = (props) => {
 
   const useStateProps = () => {
     const { todos, filters } = useSelector((state) => state);
-    return { todos: getVisibleTodos(todos, filters), 
+    return { tasks: getVisibleTodos(todos.tasks, filters), 
       status: getStatusTodos(filters)
     };
   };

@@ -17,6 +17,7 @@ const useDispatchProps = () => {
     [dispatch]
   );
   return { handleChange }
+
 };
 const _props = { ...useStateProps(), ...useDispatchProps(), ...props };
 
